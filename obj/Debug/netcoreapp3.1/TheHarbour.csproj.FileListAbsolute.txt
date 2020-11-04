@@ -1,0 +1,13 @@
+C:\Users\rodi_\source\repos\TheHarbour\TheHarbour\bin\Debug\netcoreapp3.1\TheHarbour.exe
+C:\Users\rodi_\source\repos\TheHarbour\TheHarbour\bin\Debug\netcoreapp3.1\TheHarbour.deps.json
+C:\Users\rodi_\source\repos\TheHarbour\TheHarbour\bin\Debug\netcoreapp3.1\TheHarbour.runtimeconfig.json
+C:\Users\rodi_\source\repos\TheHarbour\TheHarbour\bin\Debug\netcoreapp3.1\TheHarbour.runtimeconfig.dev.json
+C:\Users\rodi_\source\repos\TheHarbour\TheHarbour\bin\Debug\netcoreapp3.1\TheHarbour.dll
+C:\Users\rodi_\source\repos\TheHarbour\TheHarbour\bin\Debug\netcoreapp3.1\TheHarbour.pdb
+C:\Users\rodi_\source\repos\TheHarbour\TheHarbour\obj\Debug\netcoreapp3.1\TheHarbour.csprojAssemblyReference.cache
+C:\Users\rodi_\source\repos\TheHarbour\TheHarbour\obj\Debug\netcoreapp3.1\TheHarbour.AssemblyInfoInputs.cache
+C:\Users\rodi_\source\repos\TheHarbour\TheHarbour\obj\Debug\netcoreapp3.1\TheHarbour.AssemblyInfo.cs
+C:\Users\rodi_\source\repos\TheHarbour\TheHarbour\obj\Debug\netcoreapp3.1\TheHarbour.csproj.CoreCompileInputs.cache
+C:\Users\rodi_\source\repos\TheHarbour\TheHarbour\obj\Debug\netcoreapp3.1\TheHarbour.dll
+C:\Users\rodi_\source\repos\TheHarbour\TheHarbour\obj\Debug\netcoreapp3.1\TheHarbour.pdb
+C:\Users\rodi_\source\repos\TheHarbour\TheHarbour\obj\Debug\netcoreapp3.1\TheHarbour.genruntimeconfig.cache
