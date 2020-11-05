@@ -17,7 +17,8 @@
         }
         public override string WriteBoat()
         {
-            return $"{DockSpot}\t\t{BoatType}\t\t{ID}\t\t{Weight} kg\t\t{Utils.KnotsToKmh(MaxSpeed)} Km/h\t\t{UniqueProperty}";
+            return $"{DockSpot}\t\t{BoatType}\t\t{ID}\t\t{Weight} kg\t\t{Utils.KnotsToKmh(MaxSpeed)}" +
+                $" Km/h\t\t{UniqueProperty}";
         }
     }
 }

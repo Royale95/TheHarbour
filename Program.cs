@@ -9,10 +9,11 @@ namespace TheHarbour
         static void Main(string[] args)
         {
             Utils.Announce();
-            //Console.SetWindowSize(140, 60);
+            Console.SetWindowSize(140, 60);
             HarbourSlots.CreateDock();
             LoadSave.LoadData(HarbourSlots.DockingSpots);
             HarbourSlots.IncomingBoats();
+            Console.Clear();
         }
 
     }

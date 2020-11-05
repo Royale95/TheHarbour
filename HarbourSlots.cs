@@ -256,9 +256,12 @@ namespace TheHarbour
                 .GroupBy(b => b.BoatType);
             var a4 = DockingSpots
                 .Where(b => b.FreeDockSpace == true);
+            var a5 = DockingSpots
+                .Where(b => b.FreeDockSpace == false);
 
-            Console.WriteLine("[-------------------------------------------------------------------------------------------------------------------------]");
-            Console.WriteLine($"Total weight: {a} | Average speed: {Utils.KnotsToKmh(a2)} km/h  | Rejected Boats: {RejectedBoats.Count}| Free spaces: {a4.Count()} of 64");
+            Console.WriteLine("[------------------------------------------------------------------------------------------------------------------------------------]");
+            Console.WriteLine($"Total weight: {a} || Average speed: {Utils.KnotsToKmh(a2)} km/h  || Rejected Boats: {RejectedBoats.Count}" +
+                $"|| Free spaces: {a4.Count()} of 64  || Occupied spots: {a5.Count()} of 64");
             Console.Write("Boats in harbour: ");
             foreach (var item in a3)
             {
@@ -277,7 +280,7 @@ namespace TheHarbour
 
                 for (int i = 0; i < dailyAmountOfBoats; i++) // genererar x antal random typ av båtar för en dag 
                 {
-                    int rndBoat = Utils.RandomNumber(1, 6);
+                    int rndBoat = Utils.RandomNumber(1, 5 + 1);
 
                     switch (rndBoat)
                     {
@@ -298,7 +301,7 @@ namespace TheHarbour
                             break;
                     }
                 }
-                HarbourSlots.ToDock(boatsToHarbour);
+                ToDock(boatsToHarbour);
                 Thread.Sleep(5000);
             }
 
@@ -311,8 +314,8 @@ namespace TheHarbour
             {
                 Console.WriteLine("-------------------------------------------------------------------------------");
                 Console.WriteLine("\n" + "[Instructions]" + "\n[Arrow Up] = Add + 1 to daily incoming boats" +
-                    "\n[Arrow Down] = Remove - 1 to daily incoming boats" + "\n[ESC] = Quits loop and program" +
-                    "\n[ENTER] = Input any amount");
+                    "\n[Arrow Down] = Remove - 1 to daily incoming boats" +
+                    "\n[ENTER] = Input any amount" + "\n[ESC] = Quits loop and program");
                 Console.ReadKey(true);
                 ConsoleKeyInfo key = Console.ReadKey(true);
 
@@ -321,12 +324,12 @@ namespace TheHarbour
                     case ConsoleKey.UpArrow:
                         dailyAmountOfBoats++;  // Lägger till en båt till i dagliga inkomna båtar
                         Console.WriteLine("Boat added");
-                        Thread.Sleep(1000);
+                        Thread.Sleep(2000);
                         break;
                     case ConsoleKey.DownArrow:
                         dailyAmountOfBoats--; // -.--.- samma fast tar bort en båt
                         Console.WriteLine("Boat removed");
-                        Thread.Sleep(1000);
+                        Thread.Sleep(2000);
                         break;
                     case ConsoleKey.Enter:
                         try
@@ -338,13 +341,13 @@ namespace TheHarbour
                         catch (Exception)
                         {
                             Console.WriteLine("ERROR! Please use an integer" + $"\nReverted back to {dailyAmountOfBoats} daily boats");
-                            Thread.Sleep(2000);
+                            Thread.Sleep(3000);
                         }
                         Console.WriteLine($"Daily incoming boats: {dailyAmountOfBoats}");
-                        Thread.Sleep(1000);
+                        Thread.Sleep(2000);
                         break;
                     case ConsoleKey.Escape:
-                        isRunning = false; // Avslutar loopen och programmet
+                        isRunning = false; // Loopar en sista gång sen avslutas loopen och programmet
                         Console.WriteLine("Quitting Program...");
                         Thread.Sleep(1000);
                         break;

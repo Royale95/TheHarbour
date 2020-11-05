@@ -1,17 +1,16 @@
-R-LWE;236;1;1;Rowingboat;3;Max amount of passengers: 1
-C-YVT;5567;2;2;Catamaran;10;Amount of beds: 27
-C-KBG;2750;3;5;Catamaran;2;Amount of beds: 18
-C-LON;4087;1;9;Catamaran;5;Amount of beds: 45
-S-HDJ;1914;2;12;Sailboat;11;Boat Lenght: 45 meter
-S-SLB;5378;3;14;Sailboat;8;Boat Lenght: 17 meter
-L-DGA;3795;2;16;CargoShip;15;Containers: 183
-L-DMB;18792;1;22;CargoShip;8;Containers: 428
-L-CDO;6584;6;26;CargoShip;2;Containers: 195
-C-SPO;1264;2;30;Catamaran;10;Amount of beds: 54
-L-SFI;15175;3;34;CargoShip;6;Containers: 438
-S-XWR;1928;1;38;Sailboat;8;Boat Lenght: 43 meter
-L-JTI;8571;6;40;CargoShip;3;Containers: 391
-L-BYI;7086;1;45;CargoShip;4;Containers: 98
-L-IOY;7330;4;49;CargoShip;19;Containers: 108
-C-MPY;4204;1;53;Catamaran;4;Amount of beds: 29
-L-TBO;16160;6;56;CargoShip;20;Containers: 50
+S-WME;3878;2;1;Sailboat;2;Boat Lenght: 39 meter
+M-FTY;719;3;3;Motorboat;43;Horsepower: 574
+M-EAL;1280;2;4;Motorboat;8;Horsepower: 550
+M-JME;1880;1;5;Motorboat;10;Horsepower: 986
+C-VWB;6517;2;6;Catamaran;7;Amount of beds: 45
+M-ZYD;2168;3;9;Motorboat;8;Horsepower: 703
+M-VXP;1278;3;10;Motorboat;4;Horsepower: 956
+R-DUG;253;1;11;Rowingboat;2;Max amount of passengers: 1
+S-WNL;2538;3;12;Sailboat;4;Boat Lenght: 20 meter
+S-XVB;5735;3;14;Sailboat;10;Boat Lenght: 51 meter
+L-TVE;3269;1;16;CargoShip;4;Containers: 326
+C-AMM;2703;1;20;Catamaran;9;Amount of beds: 48
+L-HEN;10717;1;25;CargoShip;11;Containers: 139
+C-HYY;1276;2;29;Catamaran;1;Amount of beds: 34
+C-GFC;6339;3;32;Catamaran;12;Amount of beds: 10
+L-WYF;17454;4;35;CargoShip;1;Containers: 436

@@ -8,28 +8,26 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "/Users/elev/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\rodi_\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/elev/Documents/GitHub/TheHarbour/TheHarbour.csproj",
+      "projectUniqueName": "C:\\Users\\rodi_\\source\\repos\\TheHarbour\\TheHarbour\\TheHarbour.csproj",
       "projectName": "TheHarbour",
-      "projectPath": "/Users/elev/Documents/GitHub/TheHarbour/TheHarbour.csproj",
-      "packagesPath": "/Users/elev/.nuget/packages/",
-      "outputPath": "/Users/elev/Documents/GitHub/TheHarbour/obj/",
+      "projectPath": "C:\\Users\\rodi_\\source\\repos\\TheHarbour\\TheHarbour\\TheHarbour.csproj",
+      "packagesPath": "C:\\Users\\rodi_\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rodi_\\source\\repos\\TheHarbour\\TheHarbour\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/Users/elev/.config/NuGet/NuGet.Config"
+        "C:\\Users\\rodi_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -60,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -76,7 +76,7 @@ namespace TheHarbour
                             };
                             LoadBoat(s, harbour);
                             break;
-                        case 'L': // 'L' för Lastfartyg istället för 'C' då Catamaran kallas 'C'
+                        case 'L': 
                             CargoShip l = new CargoShip
                             {
                                 ID = boatData[0],
