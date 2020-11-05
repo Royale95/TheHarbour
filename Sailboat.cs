@@ -13,7 +13,7 @@
             Unique = Utils.FootToMeters(Båtlängd);
             DaysTilDeparture = 4;
             BoatType = "Sailboat";
-            UniqueProperty = $"Båtlängd: {Båtlängd} meter";
+            UniqueProperty = $"Boat Lenght: {Båtlängd} meter";
             DockSpot = 0;
 
         }

@@ -17,7 +17,7 @@ namespace TheHarbour
             Unique = beds;
             DaysTilDeparture = 3;
             BoatType = "Catamaran";
-            UniqueProperty = $"Antal bäddplatser: {beds}";
+            UniqueProperty = $"Amount of beds: {beds}";
             DockSpot = 0;
 
         }

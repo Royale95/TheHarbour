@@ -12,7 +12,7 @@
             Unique = MaxAntalPassagerare;
             DaysTilDeparture = 1;
             BoatType = "Rowingboat";
-            UniqueProperty = $"Max Antal Passagerare: {MaxAntalPassagerare}";
+            UniqueProperty = $"Max amount of passengers: {MaxAntalPassagerare}";
             DockSpot = 0;
         }
         public override string PrintBoat()
