@@ -9,7 +9,7 @@ namespace TheHarbour
     class LoadSave
     {
         private const string file = "Harbour.txt";
-        public static void SaveData(HarbourSlots[] harbour)
+        public static void SaveData(Harbour[] harbour)
         {
             StreamWriter sw = new StreamWriter(file, false);
             foreach (var h in harbour)
@@ -27,7 +27,7 @@ namespace TheHarbour
             }
             sw.Close();
         }
-        public static void LoadData(HarbourSlots[] harbour)
+        public static void LoadData(Harbour[] harbour)
         {
             foreach (var boat in File.ReadLines(file))
             {
@@ -107,9 +107,9 @@ namespace TheHarbour
                     }
                 }
             }
-            HarbourSlots.PrintBoats();
+            Harbour.PrintBoats();
         }
-        private static void LoadBoat(Boat b, HarbourSlots[] harbourSlots)
+        private static void LoadBoat(Boat b, Harbour[] harbourSlots)
         {
             for (int i = 0; i < harbourSlots.Length; i++)
             {

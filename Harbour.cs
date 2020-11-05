@@ -6,9 +6,9 @@ using System.Threading;
 
 namespace TheHarbour
 {
-    class HarbourSlots
+    class Harbour
     {
-        public static HarbourSlots[] DockingSpots = new HarbourSlots[64];
+        public static Harbour[] DockingSpots = new Harbour[64];
         public Boat[] DockSpot { get; set; } = new Boat[2];
         public int DockNumber { get; set; }
         public bool FreeDockSpace = true;
@@ -16,20 +16,18 @@ namespace TheHarbour
         static int dailyAmountOfBoats = 5;
         static bool isRunning = true;
         static int dayCounter = 0;
-
         public static void CreateDock()
         {
             for (int i = 0; i < DockingSpots.Length; i++)
             {
                 if (DockingSpots[i] is null)
                 {
-                    DockingSpots[i] = new HarbourSlots();
+                    DockingSpots[i] = new Harbour();
                     DockingSpots[i].DockNumber = i + 1;
                     DockingSpots[i].FreeDockSpace = true;
                 }
             }
         }
-
         public static void ToDock(List<Boat> boats)
         {
             ExtractBoat();
@@ -43,7 +41,6 @@ namespace TheHarbour
             PrintBoats();
             LoadSave.SaveData(DockingSpots);
         }
-
         private static void InsertBoat(Boat boat)
         {
             bool rejected = true;
@@ -208,7 +205,6 @@ namespace TheHarbour
             }
 
         }
-
         public static void PrintBoats()
         {
             List<Boat> listOfBoats = new List<Boat>();
@@ -241,33 +237,33 @@ namespace TheHarbour
                     listOfBoats.Add(DockingSpots[i].DockSpot[1]);
                 }
             }
-            var a = listOfBoats
+            var aTotalWeight = listOfBoats
                 .Where(b => b != null)
                 .Select(b => b.Weight)
                 .Sum();
-
-            var a2 = listOfBoats
+            var aAverageSpeed = listOfBoats
                 .Where(b => b != null)
                 .Select(b => b.MaxSpeed)
                 .Average();
-
-            var a3 = listOfBoats
+            var aBoats = listOfBoats
                 .Where(b => b != null)
                 .GroupBy(b => b.BoatType);
-            var a4 = DockingSpots
+            var aFreeSpaces = DockingSpots
                 .Where(b => b.FreeDockSpace == true);
-            var a5 = DockingSpots
+            var aOccupied = DockingSpots
                 .Where(b => b.FreeDockSpace == false);
 
             Console.WriteLine("[------------------------------------------------------------------------------------------------------------------------------------]");
-            Console.WriteLine($"Total weight: {a} || Average speed: {Utils.KnotsToKmh(a2)} km/h  || Rejected Boats: {RejectedBoats.Count}" +
-                $"|| Free spaces: {a4.Count()} of 64  || Occupied spots: {a5.Count()} of 64");
+            Console.WriteLine($"Total weight: {aTotalWeight} || Average speed: {Utils.KnotsToKmh(aAverageSpeed)} km/h  || Rejected Boats: {RejectedBoats.Count}" +
+                $"|| Free spaces: {aFreeSpaces.Count()} of 64  || Occupied spots: {aOccupied.Count()} of 64");
+            Console.WriteLine("[--------------------------------------------]");
+
             Console.Write("Boats in harbour: ");
-            foreach (var item in a3)
+            foreach (var item in aBoats)
             {
-                Console.Write($"{item.Key}: {item.Count()} ");
+                Console.WriteLine($"{item.Key}: {item.Count()} ");
             }
-            Console.WriteLine();
+            Console.WriteLine("[--------------------------------------------]");
             dayCounter++;
         }
         public static void IncomingBoats()
@@ -304,9 +300,6 @@ namespace TheHarbour
                 ToDock(boatsToHarbour);
                 Thread.Sleep(5000);
             }
-
-
-
         }
         public static void MiniMenu()
         {
