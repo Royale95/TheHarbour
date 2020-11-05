@@ -7,7 +7,7 @@
         public SailBoat()
         {
 
-            ID = "S-" + RandomString();
+            ID = "S-" + RandomChar();
             Weight = Utils.RandomNumber(800, 6000 + 1);
             MaxSpeed = Utils.RandomNumber(1, 13);
             Unique = Utils.FootToMeters(BoatLenght);
@@ -17,7 +17,7 @@
             DockSpot = 0;
 
         }
-        public override string PrintBoat()
+        public override string WriteBoat()
         {
             return $"{DockSpot}-{DockSpot + 1}\t\t{BoatType}\t\t{ID}\t\t{Weight} kg\t\t{Utils.KnotsToKmh(MaxSpeed)} Km/h\t\t{UniqueProperty}";
         }

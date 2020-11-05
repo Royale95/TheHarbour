@@ -14,9 +14,9 @@ namespace TheHarbour
         {
             return (int)(foot * 0.3048);
         }
-        public static double KnotsToKmh(double båt) //Konvertera till km/h
+        public static double KnotsToKmh(double boat) //Konvertera till km/h
         {
-            return Math.Round(båt * 1.852);
+            return (int)(boat * 1.852);
         }
         public static void Announce() // Välkomst och lite info
         {

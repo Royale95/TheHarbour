@@ -6,7 +6,7 @@ using System.Text;
 
 namespace TheHarbour
 {
-    class ReadWrite
+    class LoadSave
     {
         private const string file = "Harbour.txt";
         public static void SaveData(HarbourSlots[] harbour)
@@ -27,9 +27,9 @@ namespace TheHarbour
             }
             sw.Close();
         }
-        public static void Load(HarbourSlots[] harbour)
+        public static void LoadData(HarbourSlots[] harbour)
         {
-            foreach (var boat in File.ReadLines(file, Encoding.UTF8))
+            foreach (var boat in File.ReadLines(file))
             {
                 string[] boatData = boat.Split(';');
 
@@ -76,7 +76,7 @@ namespace TheHarbour
                             };
                             LoadBoat(s, harbour);
                             break;
-                        case 'L': // 'L' för Lastfartyg istället för 'C' då Catamaran behöver 'C'
+                        case 'L': // 'L' för Lastfartyg istället för 'C' då Catamaran kallas 'C'
                             CargoShip l = new CargoShip
                             {
                                 ID = boatData[0],
@@ -109,63 +109,64 @@ namespace TheHarbour
             }
             HarbourSlots.PrintBoats();
         }
-        private static void LoadBoat(Boat f, HarbourSlots[] hamnplatser)
+        private static void LoadBoat(Boat b, HarbourSlots[] harbourSlots)
         {
-            for (int i = 0; i < hamnplatser.Length; i++)
+            for (int i = 0; i < harbourSlots.Length; i++)
             {
-                if (f is RowBoat)
+                if (b is RowBoat)
                 {
-                    if (f.DockSpot == hamnplatser[i].DockNumber && hamnplatser[i].FreeDockSpace == true)
+                    if (b.DockSpot == harbourSlots[i].DockNumber && harbourSlots[i].FreeDockSpace is true)
                     {
-                        hamnplatser[i].DockSpot[0] = f;
-                        hamnplatser[i].FreeDockSpace = false;
+                        harbourSlots[i].DockSpot[0] = b;
+                        harbourSlots[i].FreeDockSpace = false;
                         break;
                     }
-                    if (hamnplatser[i].DockSpot[0] is RowBoat && hamnplatser[i].DockSpot[1] is null && hamnplatser[i].DockSpot[0].ID != f.ID)
+                    if (harbourSlots[i].DockSpot[0] is RowBoat && harbourSlots[i].DockSpot[1] is null
+                        && harbourSlots[i].DockSpot[0].ID != b.ID)
                     {
-                        hamnplatser[i].DockSpot[1] = f;
-                        break;
-                    }
-                }
-                if (f is MotorBoat)
-                {
-                    if (f.DockSpot == hamnplatser[i].DockNumber && hamnplatser[i].FreeDockSpace == true)
-                    {
-                        hamnplatser[i].DockSpot[0] = f;
-                        hamnplatser[i].FreeDockSpace = false;
+                        harbourSlots[i].DockSpot[1] = b;
                         break;
                     }
                 }
-                if (f is SailBoat)
+                if (b is MotorBoat)
                 {
-                    if (f.DockSpot == hamnplatser[i].DockNumber)
+                    if (b.DockSpot == harbourSlots[i].DockNumber && harbourSlots[i].FreeDockSpace is true)
                     {
-                        hamnplatser[i].DockSpot[0] = f;
-                        hamnplatser[i].FreeDockSpace = false;
-                        hamnplatser[i + 1].FreeDockSpace = false;
+                        harbourSlots[i].DockSpot[0] = b;
+                        harbourSlots[i].FreeDockSpace = false;
                         break;
                     }
                 }
-                if (f is CargoShip)
+                if (b is SailBoat)
                 {
-                    if (f.DockSpot == hamnplatser[i].DockNumber)
+                    if (b.DockSpot == harbourSlots[i].DockNumber)
                     {
-                        hamnplatser[i].DockSpot[0] = f;
-                        hamnplatser[i].FreeDockSpace = false;
-                        hamnplatser[i + 1].FreeDockSpace = false;
-                        hamnplatser[i + 2].FreeDockSpace = false;
-                        hamnplatser[i + 3].FreeDockSpace = false;
+                        harbourSlots[i].DockSpot[0] = b;
+                        harbourSlots[i].FreeDockSpace = false;
+                        harbourSlots[i + 1].FreeDockSpace = false;
                         break;
                     }
                 }
-                if (f is Catamaran)
+                if (b is CargoShip)
                 {
-                    if (f.DockSpot == hamnplatser[i].DockNumber)
+                    if (b.DockSpot == harbourSlots[i].DockNumber)
                     {
-                        hamnplatser[i].DockSpot[0] = f;
-                        hamnplatser[i].FreeDockSpace = false;
-                        hamnplatser[i + 1].FreeDockSpace = false;
-                        hamnplatser[i + 2].FreeDockSpace = false;
+                        harbourSlots[i].DockSpot[0] = b;
+                        harbourSlots[i].FreeDockSpace = false;
+                        harbourSlots[i + 1].FreeDockSpace = false;
+                        harbourSlots[i + 2].FreeDockSpace = false;
+                        harbourSlots[i + 3].FreeDockSpace = false;
+                        break;
+                    }
+                }
+                if (b is Catamaran)
+                {
+                    if (b.DockSpot == harbourSlots[i].DockNumber)
+                    {
+                        harbourSlots[i].DockSpot[0] = b;
+                        harbourSlots[i].FreeDockSpace = false;
+                        harbourSlots[i + 1].FreeDockSpace = false;
+                        harbourSlots[i + 2].FreeDockSpace = false;
                         break;
                     }
                 }

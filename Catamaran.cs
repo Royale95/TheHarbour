@@ -6,12 +6,11 @@ namespace TheHarbour
 {
     class Catamaran : Boat
     {
-        public int beds = Utils.RandomNumber(10, 61);
+        public int beds => Utils.RandomNumber(10, 61);
 
         public Catamaran()
         {
-
-            ID = "C-" + RandomString();
+            ID = "C-" + RandomChar();
             Weight = Utils.RandomNumber(1200, 8000 + 1);
             MaxSpeed = Utils.RandomNumber(1, 13);
             Unique = beds;
@@ -19,11 +18,11 @@ namespace TheHarbour
             BoatType = "Catamaran";
             UniqueProperty = $"Amount of beds: {beds}";
             DockSpot = 0;
-
         }
-        public override string PrintBoat()
+        public override string WriteBoat()
         {
-            return $"{DockSpot}-{DockSpot + 2}\t\t{BoatType}\t\t{ID}\t\t{Weight} kg\t\t{Utils.KnotsToKmh(MaxSpeed)} Km/h\t\t{UniqueProperty}";
+            return $"{DockSpot}-{DockSpot + 2}\t\t{BoatType}\t\t{ID}\t\t{Weight}" +
+                $" kg\t\t{Utils.KnotsToKmh(MaxSpeed)} Km/h\t\t{UniqueProperty}";
         }
     }
 }

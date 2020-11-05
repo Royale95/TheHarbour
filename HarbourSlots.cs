@@ -27,10 +27,10 @@ namespace TheHarbour
                     DockingSpots[i].DockNumber = i + 1;
                     DockingSpots[i].FreeDockSpace = true;
                 }
-
             }
         }
-        public static void TillKaj(List<Boat> boats)
+
+        public static void ToDock(List<Boat> boats)
         {
             ExtractBoat();
 
@@ -41,9 +41,8 @@ namespace TheHarbour
             boats.Clear();
 
             PrintBoats();
-            ReadWrite.SaveData(DockingSpots);
+            LoadSave.SaveData(DockingSpots);
         }
-
 
         private static void InsertBoat(Boat boat)
         {
@@ -60,7 +59,6 @@ namespace TheHarbour
                         rejected = false;
                         break;
                     }
-
                     if (DockingSpots[i].DockSpot[0] is RowBoat && DockingSpots[i].DockSpot[1] is null)
                     {
                         DockingSpots[i].DockSpot[1] = boat;
@@ -68,7 +66,22 @@ namespace TheHarbour
                         rejected = false;
                         break;
                     }
-
+                }
+                if (boat is SailBoat)
+                {
+                    if (i < DockingSpots.Length - 1)
+                    {
+                        if (DockingSpots[i].FreeDockSpace == true && DockingSpots[i].DockSpot[0] is null
+                            && DockingSpots[i + 1].DockSpot[0] is null)
+                        {
+                            DockingSpots[i].DockSpot[0] = boat;
+                            boat.DockSpot = DockingSpots[i].DockNumber;
+                            DockingSpots[i].FreeDockSpace = false;
+                            DockingSpots[i + 1].FreeDockSpace = false;
+                            rejected = false;
+                            break;
+                        }
+                    }
                 }
                 if (boat is MotorBoat)
                 {
@@ -80,31 +93,16 @@ namespace TheHarbour
                         rejected = false;
                         break;
                     }
-
-                }
-                if (boat is SailBoat)
-                {
-                    if (i < DockingSpots.Length - 1)
-                    {
-                        if (DockingSpots[i].FreeDockSpace == true && DockingSpots[i].DockSpot[0] is null && DockingSpots[i + 1].DockSpot[0] is null)
-                        {
-                            DockingSpots[i].DockSpot[0] = boat;
-                            boat.DockSpot = DockingSpots[i].DockNumber;
-                            DockingSpots[i].FreeDockSpace = false;
-                            DockingSpots[i + 1].FreeDockSpace = false;
-                            rejected = false;
-                            break;
-                        }
-                    }
                 }
                 if (boat is CargoShip)
                 {
                     if (i < DockingSpots.Length - 3)
                     {
 
-                        if (DockingSpots[i].FreeDockSpace == true && DockingSpots[i].DockSpot[0] is null && DockingSpots[i + 1].DockSpot[0] is null && DockingSpots[i + 2].DockSpot[0] is null && DockingSpots[i + 3].DockSpot[0] is null && i < 61)
+                        if (DockingSpots[i].FreeDockSpace == true && DockingSpots[i].DockSpot[0] is null
+                            && DockingSpots[i + 1].DockSpot[0] is null && DockingSpots[i + 2].DockSpot[0]
+                            is null && DockingSpots[i + 3].DockSpot[0] is null)
                         {
-
                             DockingSpots[i].DockSpot[0] = boat;
                             boat.DockSpot = DockingSpots[i].DockNumber;
                             DockingSpots[i].FreeDockSpace = false;
@@ -114,9 +112,7 @@ namespace TheHarbour
                             rejected = false;
                             break;
                         }
-
                     }
-
                 }
                 if (boat is Catamaran)
                 {
@@ -134,14 +130,12 @@ namespace TheHarbour
                         }
                     }
                 }
-
             }
             if (rejected)
             {
                 RejectedBoats.Add(boat);
             }
         }
-
         private static void ExtractBoat()
         {
             for (int i = 0; i < DockingSpots.Length; i++)
@@ -179,6 +173,18 @@ namespace TheHarbour
                     }
 
                 }
+                if (DockingSpots[i].DockSpot[0] is Catamaran)
+                {
+
+                    DockingSpots[i].DockSpot[0].DaysTilDeparture--;
+                    if (DockingSpots[i].DockSpot[0].DaysTilDeparture == 0)
+                    {
+                        DockingSpots[i].DockSpot[0] = null;
+                        DockingSpots[i].FreeDockSpace = true;
+                        DockingSpots[i + 1].FreeDockSpace = true;
+                        DockingSpots[i + 2].FreeDockSpace = true;
+                    }
+                }
                 if (DockingSpots[i].DockSpot[0] is RowBoat)
                 {
                     DockingSpots[i].DockSpot[0].DaysTilDeparture--;
@@ -198,18 +204,6 @@ namespace TheHarbour
                         DockingSpots[i].FreeDockSpace = true;
                     }
 
-                }
-                if (DockingSpots[i].DockSpot[0] is Catamaran)
-                {
-
-                    DockingSpots[i].DockSpot[0].DaysTilDeparture--;
-                    if (DockingSpots[i].DockSpot[0].DaysTilDeparture == 0)
-                    {
-                        DockingSpots[i].DockSpot[0] = null;
-                        DockingSpots[i].FreeDockSpace = true;
-                        DockingSpots[i + 1].FreeDockSpace = true;
-                        DockingSpots[i + 2].FreeDockSpace = true;
-                    }
                 }
             }
 
@@ -231,10 +225,9 @@ namespace TheHarbour
                 if (DockingSpots[i].FreeDockSpace is false)
                 {
                     if (DockingSpots[i].DockSpot[0] != null)
-                        Console.WriteLine($"{DockingSpots[i].DockSpot[0].PrintBoat()}");
-
+                        Console.WriteLine($"{DockingSpots[i].DockSpot[0].WriteBoat()}");
                     if (DockingSpots[i].DockSpot[1] != null)
-                        Console.WriteLine($"{DockingSpots[i].DockSpot[1].PrintBoat()}");
+                        Console.WriteLine($"{DockingSpots[i].DockSpot[1].WriteBoat()}");
                 }
             }
             for (int i = 0; i < DockingSpots.Length; i++)
@@ -305,7 +298,7 @@ namespace TheHarbour
                             break;
                     }
                 }
-                HarbourSlots.TillKaj(boatsToHarbour);
+                HarbourSlots.ToDock(boatsToHarbour);
                 Thread.Sleep(5000);
             }
 

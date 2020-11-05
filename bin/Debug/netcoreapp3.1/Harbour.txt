@@ -1,13 +1,17 @@
-R-FKL;163;1;1;Rowingboat;2;Max amount of passengers: 2
-R-EAN;145;1;1;Rowingboat;2;Max amount of passengers: 4
-L-GSB;14366;5;2;CargoShip;19;Containers: 233
-S-ULS;4885;4;6;Sailboat;2;Boat Lenght: 43 meter
-M-QLT;1838;1;8;Motorboat;16;Horsepower: 39
-C-HAH;3237;3;9;Catamaran;10;Amount of beds: 55
-S-EKG;4732;2;13;Sailboat;9;Boat Lenght: 38 meter
-L-YJM;16078;4;15;CargoShip;3;Containers: 42
-S-DCS;2956;2;19;Sailboat;12;Boat Lenght: 27 meter
-L-RFG;11071;4;21;CargoShip;13;Containers: 440
-C-QSH;4535;3;25;Catamaran;12;Amount of beds: 40
-L-DPZ;14795;3;43;CargoShip;18;Containers: 55
-L-YDO;10211;3;47;CargoShip;4;Containers: 349
+R-LWE;236;1;1;Rowingboat;3;Max amount of passengers: 1
+C-YVT;5567;2;2;Catamaran;10;Amount of beds: 27
+C-KBG;2750;3;5;Catamaran;2;Amount of beds: 18
+C-LON;4087;1;9;Catamaran;5;Amount of beds: 45
+S-HDJ;1914;2;12;Sailboat;11;Boat Lenght: 45 meter
+S-SLB;5378;3;14;Sailboat;8;Boat Lenght: 17 meter
+L-DGA;3795;2;16;CargoShip;15;Containers: 183
+L-DMB;18792;1;22;CargoShip;8;Containers: 428
+L-CDO;6584;6;26;CargoShip;2;Containers: 195
+C-SPO;1264;2;30;Catamaran;10;Amount of beds: 54
+L-SFI;15175;3;34;CargoShip;6;Containers: 438
+S-XWR;1928;1;38;Sailboat;8;Boat Lenght: 43 meter
+L-JTI;8571;6;40;CargoShip;3;Containers: 391
+L-BYI;7086;1;45;CargoShip;4;Containers: 98
+L-IOY;7330;4;49;CargoShip;19;Containers: 108
+C-MPY;4204;1;53;Catamaran;4;Amount of beds: 29
+L-TBO;16160;6;56;CargoShip;20;Containers: 50
