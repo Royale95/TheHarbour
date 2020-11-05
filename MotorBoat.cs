@@ -17,7 +17,7 @@
         }
         public override string WriteBoat()
         {
-            //Utils.KnotsToKmh(MaxSpeed); // Utanför jämfört med de andra båtarna pga en bugg som gör så att Horsepower blir fel placerad.
+            Utils.KnotsToKmh(MaxSpeed); // Utanför jämfört med de andra båtarna pga en bugg som gör så att Horsepower blir fel placerad.
 
             if (MaxSpeed < 10)
                 return $"{DockSpot}\t\t{BoatType}\t\t{ID}\t\t{Weight}" +
