@@ -2,7 +2,7 @@
 {
     class SailBoat : Boat
     {
-        public int Båtlängd = Utils.RandomNumber(10, 61);
+        public int BoatLenght = Utils.RandomNumber(10, 61);
 
         public SailBoat()
         {
@@ -10,10 +10,10 @@
             ID = "S-" + RandomString();
             Weight = Utils.RandomNumber(800, 6000 + 1);
             MaxSpeed = Utils.RandomNumber(1, 13);
-            Unique = Utils.FootToMeters(Båtlängd);
+            Unique = Utils.FootToMeters(BoatLenght);
             DaysTilDeparture = 4;
             BoatType = "Sailboat";
-            UniqueProperty = $"Boat Lenght: {Båtlängd} meter";
+            UniqueProperty = $"Boat Lenght: {BoatLenght} meter";
             DockSpot = 0;
 
         }

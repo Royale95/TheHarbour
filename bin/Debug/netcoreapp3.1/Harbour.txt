@@ -1,16 +1,13 @@
-M-GAH;1357;2;1;Motorboat;21;Horsepower: 918
-L-SEH;12172;3;2;CargoShip;13;Containers: 191
-C-FNS;6861;2;6;Catamaran;4;Antal bäddplatser: 21
-R-QMQ;115;1;9;Rowingboat;2;Max Antal Passagerare: 1
-S-NRI;4597;2;10;Sailboat;7;Båtlängd: 40 meter
-M-GAK;1558;3;12;Motorboat;35;Horsepower: 800
-S-ADH;1261;2;15;Sailboat;5;Båtlängd: 24 meter
-M-PBJ;2960;2;17;Motorboat;15;Horsepower: 629
-M-QZX;765;2;18;Motorboat;49;Horsepower: 535
-M-CMZ;2434;2;19;Motorboat;46;Horsepower: 740
-S-NPG;5009;1;20;Sailboat;3;Båtlängd: 12 meter
-M-XWH;1137;1;22;Motorboat;22;Horsepower: 56
-M-LVO;2037;1;24;Motorboat;3;Horsepower: 491
-C-WNF;5587;3;25;Catamaran;4;Antal bäddplatser: 45
-L-LYT;8271;6;28;CargoShip;5;Containers: 260
-L-CSE;10450;6;32;CargoShip;20;Containers: 54
+R-FKL;163;1;1;Rowingboat;2;Max amount of passengers: 2
+R-EAN;145;1;1;Rowingboat;2;Max amount of passengers: 4
+L-GSB;14366;5;2;CargoShip;19;Containers: 233
+S-ULS;4885;4;6;Sailboat;2;Boat Lenght: 43 meter
+M-QLT;1838;1;8;Motorboat;16;Horsepower: 39
+C-HAH;3237;3;9;Catamaran;10;Amount of beds: 55
+S-EKG;4732;2;13;Sailboat;9;Boat Lenght: 38 meter
+L-YJM;16078;4;15;CargoShip;3;Containers: 42
+S-DCS;2956;2;19;Sailboat;12;Boat Lenght: 27 meter
+L-RFG;11071;4;21;CargoShip;13;Containers: 440
+C-QSH;4535;3;25;Catamaran;12;Amount of beds: 40
+L-DPZ;14795;3;43;CargoShip;18;Containers: 55
+L-YDO;10211;3;47;CargoShip;4;Containers: 349

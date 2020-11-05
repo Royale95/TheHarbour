@@ -2,17 +2,17 @@
 {
     class RowBoat : Boat
     {
-        public int MaxAntalPassagerare = Utils.RandomNumber(1, 7);
+        public int MaxAmountOfPassengers = Utils.RandomNumber(1, 7);
 
         public RowBoat()
         {
             ID = "R-" + RandomString();
             Weight = Utils.RandomNumber(100, 300 + 1);
             MaxSpeed = Utils.RandomNumber(1, 4);
-            Unique = MaxAntalPassagerare;
+            Unique = MaxAmountOfPassengers;
             DaysTilDeparture = 1;
             BoatType = "Rowingboat";
-            UniqueProperty = $"Max amount of passengers: {MaxAntalPassagerare}";
+            UniqueProperty = $"Max amount of passengers: {MaxAmountOfPassengers}";
             DockSpot = 0;
         }
         public override string PrintBoat()
