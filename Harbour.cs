@@ -244,7 +244,7 @@ namespace TheHarbour
             var aAverageSpeed = listOfBoats
                 .Where(b => b != null)
                 .Select(b => b.MaxSpeed)
-                .Average();
+                .DefaultIfEmpty().Average();
             var aBoats = listOfBoats
                 .Where(b => b != null)
                 .GroupBy(b => b.BoatType);
