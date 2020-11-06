@@ -16,7 +16,7 @@ namespace TheHarbour
                 fs1.Close();
             }
             Utils.Announce();
-            //Console.SetWindowSize(140, 60);
+            Console.SetWindowSize(140, 60);
             Harbour.CreateDock();
             LoadSave.LoadData(Harbour.DockingSpots);
             Harbour.IncomingBoats();

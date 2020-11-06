@@ -1,22 +1,20 @@
 ﻿<Properties StartupConfiguration="{B2D853D9-C9AB-46BE-BDE5-4CC92A438607}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Harbour.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="Boat.cs" Line="13" Column="20" />
       <File FileName="CargoShip.cs" />
       <File FileName="Catamaran.cs" />
       <File FileName="MotorBoat.cs" Line="9" Column="35" />
-      <File FileName="Program.cs" Line="14" Column="60" />
+      <File FileName="Program.cs" Line="19" Column="15" />
       <File FileName="Utils.cs" Line="17" Column="76" />
       <File FileName="LoadSave.cs" Line="1" Column="1" />
-      <File FileName="Harbour.cs" Line="1" Column="1" />
+      <File FileName="Harbour.cs" Line="247" Column="45" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TheHarbour" expanded="True">
-            <Node name="TheHarbour" expanded="True">
-              <Node name="Harbour.cs" selected="True" />
-            </Node>
+            <Node name="TheHarbour" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>
