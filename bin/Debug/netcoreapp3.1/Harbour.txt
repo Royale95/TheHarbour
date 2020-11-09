@@ -1,20 +1,14 @@
-M-JTI;2951;1;1;Motorboat;43;Horsepower: 779
-M-TJR;2344;1;2;Motorboat;19;Horsepower: 583
-R-ESH;279;1;3;Rowingboat;1;Max amount of passengers: 1
-M-KAL;560;1;4;Motorboat;35;Horsepower: 730
-M-YCJ;1632;1;5;Motorboat;48;Horsepower: 601
-M-SQJ;404;3;6;Motorboat;12;Horsepower: 434
-M-XOK;713;3;7;Motorboat;37;Horsepower: 839
-S-SSP;1410;4;8;Sailboat;1;Boat Lenght: 36 meter
-L-RPO;10514;6;10;CargoShip;18;Containers: 220
-S-DZN;4475;3;14;Sailboat;10;Boat Lenght: 29 meter
-S-IPE;4013;3;16;Sailboat;7;Boat Lenght: 53 meter
-L-ORH;17857;3;18;CargoShip;19;Containers: 120
-C-DME;2728;1;22;Catamaran;1;Amount of beds: 32
-S-SYI;3242;3;25;Sailboat;1;Boat Lenght: 27 meter
-L-MOD;8295;1;27;CargoShip;14;Containers: 67
-L-NZM;14347;1;31;CargoShip;8;Containers: 476
-L-XYX;3036;2;35;CargoShip;16;Containers: 104
-C-FNR;5870;2;39;Catamaran;3;Amount of beds: 48
-L-ZCF;15744;2;42;CargoShip;3;Containers: 217
-L-JWE;18257;5;52;CargoShip;7;Containers: 10
+M-JMP;648;2;1;Motorboat;29;Horsepower: 608
+M-JRW;2175;1;2;Motorboat;3;Horsepower: 672
+M-MBL;1895;2;3;Motorboat;36;Horsepower: 539
+M-LXD;1639;1;4;Motorboat;51;Horsepower: 652
+S-QWV;4983;3;5;Sailboat;6;Boat Lenght: 16 meter
+S-SFO;2963;3;7;Sailboat;8;Boat Lenght: 56 meter
+S-MNI;2316;3;9;Sailboat;1;Boat Lenght: 51 meter
+S-SUH;3546;4;11;Sailboat;8;Boat Lenght: 35 meter
+L-PRJ;3038;6;13;CargoShip;18;Containers: 166
+S-QII;1216;1;17;Sailboat;7;Boat Lenght: 29 meter
+S-JFW;1946;4;19;Sailboat;10;Boat Lenght: 35 meter
+S-XVM;4752;4;21;Sailboat;4;Boat Lenght: 51 meter
+R-TCF;104;1;23;Rowingboat;2;Max amount of passengers: 3
+L-EGZ;17431;3;27;CargoShip;8;Containers: 309

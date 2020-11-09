@@ -9,6 +9,16 @@ namespace TheHarbour
     class LoadSave
     {
         private const string file = "Harbour.txt";
+
+        public static void CheckFileExistance()
+        {
+            if (File.Exists("Harbour.txt") == false)
+            {
+                FileStream fs1 = File.Create("Harbour.txt");
+
+                fs1.Close();
+            }
+        }
         public static void SaveData(Harbour[] harbour)
         {
             StreamWriter sw = new StreamWriter(file, false);

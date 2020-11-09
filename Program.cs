@@ -9,12 +9,7 @@ namespace TheHarbour
     {
         static void Main(string[] args)
         {
-            if (File.Exists("Hamnen.txt") == false)
-            {
-                FileStream fs1 = File.Create("Hamnen.txt");
-
-                fs1.Close();
-            }
+            LoadSave.CheckFileExistance();
             Utils.Announce();
             Console.SetWindowSize(140, 60);
             Harbour.CreateDock();
